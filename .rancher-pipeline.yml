@@ -17,6 +17,9 @@ stages:
       tag: example-helloserver:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: 192.168.1.252:10081
+    env:
+      PLUGIN_DEBUG: true
+      PLUGIN_INSECURE: true
 - name: Deploy
   steps:
   - applyYamlConfig:
